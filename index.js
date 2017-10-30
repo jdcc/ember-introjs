@@ -24,7 +24,10 @@ module.exports = {
   },
 
   treeForVendor(tree) {
-    let trees = [tree];
+    let trees = [];
+    if (tree) {
+      trees.append(tree);
+    }
 
     trees.push(new Funnel(this.introJsPath(), {
       destDir: 'ember-introjs',
